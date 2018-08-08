@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF17807B211B787F009631C3 /* RandomQuoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF17807A211B787F009631C3 /* RandomQuoteViewController.swift */; };
 		BF6F05BC211B6AEE00DA760C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6F05BB211B6AEE00DA760C /* AppDelegate.swift */; };
 		BF6F05BE211B6AEE00DA760C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6F05BD211B6AEE00DA760C /* ViewController.swift */; };
 		BF6F05C0211B6AEF00DA760C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF6F05BF211B6AEF00DA760C /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BF17807A211B787F009631C3 /* RandomQuoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomQuoteViewController.swift; sourceTree = "<group>"; };
 		BF6F05B8211B6AEE00DA760C /* Quote Master.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Quote Master.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF6F05BB211B6AEE00DA760C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF6F05BD211B6AEE00DA760C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				BF6F05BB211B6AEE00DA760C /* AppDelegate.swift */,
+				BF17807A211B787F009631C3 /* RandomQuoteViewController.swift */,
 				BF6F05BD211B6AEE00DA760C /* ViewController.swift */,
 				BF6F05BF211B6AEF00DA760C /* Assets.xcassets */,
 				BF6F05C1211B6AEF00DA760C /* Main.storyboard */,
@@ -256,6 +259,7 @@
 			files = (
 				BF6F05BE211B6AEE00DA760C /* ViewController.swift in Sources */,
 				BF6F05BC211B6AEE00DA760C /* AppDelegate.swift in Sources */,
+				BF17807B211B787F009631C3 /* RandomQuoteViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

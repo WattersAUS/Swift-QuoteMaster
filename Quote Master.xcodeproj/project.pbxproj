@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		BF17807B211B787F009631C3 /* RandomQuoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF17807A211B787F009631C3 /* RandomQuoteViewController.swift */; };
+		BF351A282121F9890026B3E3 /* OnlineServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF351A272121F9890026B3E3 /* OnlineServices.swift */; };
+		BF351A2B2121FA5C0026B3E3 /* Authors.json in Resources */ = {isa = PBXBuildFile; fileRef = BF351A2A2121FA5C0026B3E3 /* Authors.json */; };
+		BF351A2E21222E6A0026B3E3 /* OnlineDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF351A2D21222E6A0026B3E3 /* OnlineDelegate.swift */; };
 		BF6F05BC211B6AEE00DA760C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6F05BB211B6AEE00DA760C /* AppDelegate.swift */; };
 		BF6F05BE211B6AEE00DA760C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6F05BD211B6AEE00DA760C /* ViewController.swift */; };
 		BF6F05C0211B6AEF00DA760C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF6F05BF211B6AEF00DA760C /* Assets.xcassets */; };
@@ -35,6 +38,9 @@
 
 /* Begin PBXFileReference section */
 		BF17807A211B787F009631C3 /* RandomQuoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomQuoteViewController.swift; sourceTree = "<group>"; };
+		BF351A272121F9890026B3E3 /* OnlineServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineServices.swift; sourceTree = "<group>"; };
+		BF351A2A2121FA5C0026B3E3 /* Authors.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = Authors.json; path = ../../../../../../Music/Authors.json; sourceTree = "<group>"; };
+		BF351A2D21222E6A0026B3E3 /* OnlineDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineDelegate.swift; sourceTree = "<group>"; };
 		BF6F05B8211B6AEE00DA760C /* Quote Master.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Quote Master.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF6F05BB211B6AEE00DA760C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF6F05BD211B6AEE00DA760C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +81,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF351A262121F9620026B3E3 /* Defaults */ = {
+			isa = PBXGroup;
+			children = (
+				BF351A272121F9890026B3E3 /* OnlineServices.swift */,
+			);
+			path = Defaults;
+			sourceTree = "<group>";
+		};
+		BF351A292121F9C40026B3E3 /* Docs */ = {
+			isa = PBXGroup;
+			children = (
+				BF351A2A2121FA5C0026B3E3 /* Authors.json */,
+			);
+			path = Docs;
+			sourceTree = "<group>";
+		};
+		BF351A2C21222E090026B3E3 /* ProtocolHandler */ = {
+			isa = PBXGroup;
+			children = (
+				BF351A2D21222E6A0026B3E3 /* OnlineDelegate.swift */,
+			);
+			path = ProtocolHandler;
+			sourceTree = "<group>";
+		};
 		BF6F05AF211B6AED00DA760C = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +128,9 @@
 		BF6F05BA211B6AEE00DA760C /* Quote Master */ = {
 			isa = PBXGroup;
 			children = (
+				BF351A2C21222E090026B3E3 /* ProtocolHandler */,
+				BF351A292121F9C40026B3E3 /* Docs */,
+				BF351A262121F9620026B3E3 /* Defaults */,
 				BF6F05BB211B6AEE00DA760C /* AppDelegate.swift */,
 				BF17807A211B787F009631C3 /* RandomQuoteViewController.swift */,
 				BF6F05BD211B6AEE00DA760C /* ViewController.swift */,
@@ -232,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF6F05C0211B6AEF00DA760C /* Assets.xcassets in Resources */,
+				BF351A2B2121FA5C0026B3E3 /* Authors.json in Resources */,
 				BF6F05C3211B6AEF00DA760C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,6 +292,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF6F05BE211B6AEE00DA760C /* ViewController.swift in Sources */,
+				BF351A282121F9890026B3E3 /* OnlineServices.swift in Sources */,
+				BF351A2E21222E6A0026B3E3 /* OnlineDelegate.swift in Sources */,
 				BF6F05BC211B6AEE00DA760C /* AppDelegate.swift in Sources */,
 				BF17807B211B787F009631C3 /* RandomQuoteViewController.swift in Sources */,
 			);

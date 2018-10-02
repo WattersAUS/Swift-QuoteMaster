@@ -12,19 +12,19 @@
 import Foundation
 
 protocol OnlineDelegate: class {
-    var service: OnlineService! { get set }
+    var service: QuoteService! { get set }
 }
 
 class OnlineDelegateHandler: NSObject, OnlineDelegate {
     
-    private var OnlineData: [String: AnyObject]!
-    internal var service: OnlineService!
-    internal var online:  Bool = false
+    private var QuoteData: [String: AnyObject]!
+    internal var service:   QuoteService!
+    internal var online:    Bool = false
     
     override init() {
         super.init()
-        self.OnlineData = [:]
-        self.service    = OnlineService()
+        self.QuoteData = [:]
+        self.service    = QuoteService()
         self.online     = false
         return
     }
@@ -34,21 +34,21 @@ class OnlineDelegateHandler: NSObject, OnlineDelegate {
     // if we don't yet have a value return a default
     //-------------------------------------------------------------------------------
     private func extractHeaderValue(keyValue: serviceHeader) -> String {
-        return (self.OnlineData.index(forKey: keyValue.rawValue) == nil) ? "" : self.OnlineData[keyValue.rawValue] as! String
+        return (self.QuoteData.index(forKey: keyValue.rawValue) == nil) ? "" : self.QuoteData[keyValue.rawValue] as! String
     }
 
     private func extractHeaderValue(keyValue: serviceHeader) -> [[String: AnyObject]] {
-        return (self.OnlineData.index(forKey: keyValue.rawValue) == nil) ? ([[:]]) : self.OnlineData[keyValue.rawValue] as! [[String : AnyObject]]
+        return (self.QuoteData.index(forKey: keyValue.rawValue) == nil) ? ([[:]]) : self.QuoteData[keyValue.rawValue] as! [[String : AnyObject]]
     }
     
     private func extractServiceValue(keyValue: serviceType) -> String {
-        return (self.OnlineData.index(forKey: keyValue.rawValue) == nil) ? "" : self.OnlineData[keyValue.rawValue] as! String
+        return (self.QuoteData.index(forKey: keyValue.rawValue) == nil) ? "" : self.QuoteData[keyValue.rawValue] as! String
     }
     
     //-------------------------------------------------------------------------------
     // parse through the JSON Object and extract details
     //-------------------------------------------------------------------------------
-    private func loadQuotesFromJSON() {
+    private func decodeQuoteJSON() {
         
         func decodeAuthorsFromResponse(array: [[String: AnyObject]]) -> [Author] {
             
@@ -89,6 +89,7 @@ class OnlineDelegateHandler: NSObject, OnlineDelegate {
                         instance.name = value as! String
                         break
                     case serviceAuthor.Period.rawValue:
+                        // left for future
                         break
                     case serviceAuthor.Quotes.rawValue:
                         instance.quotes = decodeQuotesFromResponse(array: value as! [[String: AnyObject]])
@@ -110,12 +111,12 @@ class OnlineDelegateHandler: NSObject, OnlineDelegate {
         return
     }
     
-    func loadOnlineResults() {
+    func loadOnlineQuotes() {
         do {
             let jsonFile = try String(contentsOf: URL(string: "https://www.shiny-ideas.tech/qws/quotes/5144aad8-b317-11e7-a9d6-00163eee1df8/")!)
             let fileData: Data = jsonFile.data(using: String.Encoding.utf8, allowLossyConversion: false)!
-            self.OnlineData = try JSONSerialization.jsonObject(with: fileData, options: .allowFragments) as! Dictionary<String, AnyObject>
-            self.loadQuotesFromJSON()
+            self.QuoteData = try JSONSerialization.jsonObject(with: fileData, options: .allowFragments) as! Dictionary<String, AnyObject>
+            self.decodeQuoteJSON()
             self.online = true
         } catch {
             self.online = false

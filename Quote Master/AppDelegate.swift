@@ -17,11 +17,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
         if let button = statusItem.button {
-            button.image = NSImage(named:NSImage.Name("Pen"))
+            button.image = NSImage(named:"Pen")
             button.action = #selector(randomQuote(_:))
         }
-        getQuotes()
-        buildMenu()
+        // get new quotes
+        self.getLatestQuotes()
+        self.buildMenu()
     }
     
 //    func applicationDidFinishLaunching(_ aNotification: Notification) {
@@ -36,8 +37,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Insert code here to tear down your application
     }
     
-    func getQuotes() {
-        
+    func getLatestQuotes() {
+        // check we can see program defaults
+//        let siAccess = Bundle.main.object(forInfoDictionaryKey: "SI-Domain") as! String + (Bundle.main.object(forInfoDictionaryKey: "SI-Access-URL") as! String)
+//        let siQuote  = Bundle.main.object(forInfoDictionaryKey: "SI-Domain") as! String + (Bundle.main.object(forInfoDictionaryKey: "SI-All-Quote-URL") as! String)
     }
     
     @objc func randomQuote(_ sender: Any?) {

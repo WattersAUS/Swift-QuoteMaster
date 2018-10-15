@@ -7,10 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BF12F17C21458E1600F8365A /* Enumerations.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF12F17B21458E1600F8365A /* Enumerations.swift */; };
-		BF12F17E21458E6200F8365A /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF12F17D21458E6200F8365A /* Quote.swift */; };
-		BF12F18021458E8C00F8365A /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF12F17F21458E8C00F8365A /* Author.swift */; };
-		BF12F18221458EF500F8365A /* QuoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF12F18121458EF500F8365A /* QuoteService.swift */; };
+		BF12F18221458EF500F8365A /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF12F18121458EF500F8365A /* Services.swift */; };
 		BF17807B211B787F009631C3 /* RandomQuoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF17807A211B787F009631C3 /* RandomQuoteViewController.swift */; };
 		BF351A2B2121FA5C0026B3E3 /* Authors.json in Resources */ = {isa = PBXBuildFile; fileRef = BF351A2A2121FA5C0026B3E3 /* Authors.json */; };
 		BF351A2E21222E6A0026B3E3 /* QuoteServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF351A2D21222E6A0026B3E3 /* QuoteServiceDelegate.swift */; };
@@ -20,6 +17,12 @@
 		BF6F05C3211B6AEF00DA760C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF6F05C1211B6AEF00DA760C /* Main.storyboard */; };
 		BF6F05CF211B6AEF00DA760C /* Quote_MasterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6F05CE211B6AEF00DA760C /* Quote_MasterTests.swift */; };
 		BF6F05DA211B6AEF00DA760C /* Quote_MasterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6F05D9211B6AEF00DA760C /* Quote_MasterUITests.swift */; };
+		BF978784216564AA00BF75A0 /* Token.json in Resources */ = {isa = PBXBuildFile; fileRef = BF978783216564AA00BF75A0 /* Token.json */; };
+		BF9787862165688D00BF75A0 /* AllQuotes.json in Resources */ = {isa = PBXBuildFile; fileRef = BF9787852165688D00BF75A0 /* AllQuotes.json */; };
+		BF97878921656CA400BF75A0 /* Config.json in Resources */ = {isa = PBXBuildFile; fileRef = BF97878821656CA400BF75A0 /* Config.json */; };
+		BFA68B3C216A32590041DA81 /* TokenServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA68B3B216A32590041DA81 /* TokenServiceDelegate.swift */; };
+		BFA68B3E216A36A00041DA81 /* ConfigurationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA68B3D216A36A00041DA81 /* ConfigurationDelegate.swift */; };
+		BFE5B2F1216D531F003B1D72 /* testQuoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE5B2F0216D531F003B1D72 /* testQuoteService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,10 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		BF12F17B21458E1600F8365A /* Enumerations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enumerations.swift; sourceTree = "<group>"; };
-		BF12F17D21458E6200F8365A /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
-		BF12F17F21458E8C00F8365A /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
-		BF12F18121458EF500F8365A /* QuoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteService.swift; sourceTree = "<group>"; };
+		BF12F18121458EF500F8365A /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		BF17807A211B787F009631C3 /* RandomQuoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomQuoteViewController.swift; sourceTree = "<group>"; };
 		BF351A2A2121FA5C0026B3E3 /* Authors.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = Authors.json; path = ../../../../../../Music/Authors.json; sourceTree = "<group>"; };
 		BF351A2D21222E6A0026B3E3 /* QuoteServiceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteServiceDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +60,12 @@
 		BF6F05D5211B6AEF00DA760C /* Quote MasterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Quote MasterUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF6F05D9211B6AEF00DA760C /* Quote_MasterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote_MasterUITests.swift; sourceTree = "<group>"; };
 		BF6F05DB211B6AEF00DA760C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF978783216564AA00BF75A0 /* Token.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Token.json; sourceTree = "<group>"; };
+		BF9787852165688D00BF75A0 /* AllQuotes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = AllQuotes.json; sourceTree = "<group>"; };
+		BF97878821656CA400BF75A0 /* Config.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Config.json; sourceTree = "<group>"; };
+		BFA68B3B216A32590041DA81 /* TokenServiceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenServiceDelegate.swift; sourceTree = "<group>"; };
+		BFA68B3D216A36A00041DA81 /* ConfigurationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationDelegate.swift; sourceTree = "<group>"; };
+		BFE5B2F0216D531F003B1D72 /* testQuoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testQuoteService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,9 +96,7 @@
 		BF12F18321458F2400F8365A /* Structures */ = {
 			isa = PBXGroup;
 			children = (
-				BF12F17D21458E6200F8365A /* Quote.swift */,
-				BF12F17F21458E8C00F8365A /* Author.swift */,
-				BF12F18121458EF500F8365A /* QuoteService.swift */,
+				BF12F18121458EF500F8365A /* Services.swift */,
 			);
 			path = Structures;
 			sourceTree = "<group>";
@@ -104,21 +108,24 @@
 			path = Defaults;
 			sourceTree = "<group>";
 		};
-		BF351A292121F9C40026B3E3 /* Docs */ = {
+		BF351A292121F9C40026B3E3 /* Service Examples */ = {
 			isa = PBXGroup;
 			children = (
 				BF351A2A2121FA5C0026B3E3 /* Authors.json */,
+				BF978783216564AA00BF75A0 /* Token.json */,
+				BF9787852165688D00BF75A0 /* AllQuotes.json */,
 			);
-			path = Docs;
+			path = "Service Examples";
 			sourceTree = "<group>";
 		};
-		BF351A2C21222E090026B3E3 /* ServiceAccess */ = {
+		BF351A2C21222E090026B3E3 /* Protocol Handlers */ = {
 			isa = PBXGroup;
 			children = (
-				BF12F17B21458E1600F8365A /* Enumerations.swift */,
 				BF351A2D21222E6A0026B3E3 /* QuoteServiceDelegate.swift */,
+				BFA68B3B216A32590041DA81 /* TokenServiceDelegate.swift */,
+				BFA68B3D216A36A00041DA81 /* ConfigurationDelegate.swift */,
 			);
-			path = ServiceAccess;
+			path = "Protocol Handlers";
 			sourceTree = "<group>";
 		};
 		BF6F05AF211B6AED00DA760C = {
@@ -144,9 +151,10 @@
 		BF6F05BA211B6AEE00DA760C /* Quote Master */ = {
 			isa = PBXGroup;
 			children = (
-				BF351A292121F9C40026B3E3 /* Docs */,
+				BF97878721656C8400BF75A0 /* Config Example */,
+				BF351A292121F9C40026B3E3 /* Service Examples */,
 				BF12F18321458F2400F8365A /* Structures */,
-				BF351A2C21222E090026B3E3 /* ServiceAccess */,
+				BF351A2C21222E090026B3E3 /* Protocol Handlers */,
 				BF351A262121F9620026B3E3 /* Defaults */,
 				BF6F05BB211B6AEE00DA760C /* AppDelegate.swift */,
 				BF17807A211B787F009631C3 /* RandomQuoteViewController.swift */,
@@ -164,6 +172,7 @@
 			children = (
 				BF6F05CE211B6AEF00DA760C /* Quote_MasterTests.swift */,
 				BF6F05D0211B6AEF00DA760C /* Info.plist */,
+				BFE5B2F0216D531F003B1D72 /* testQuoteService.swift */,
 			);
 			path = "Quote MasterTests";
 			sourceTree = "<group>";
@@ -175,6 +184,14 @@
 				BF6F05DB211B6AEF00DA760C /* Info.plist */,
 			);
 			path = "Quote MasterUITests";
+			sourceTree = "<group>";
+		};
+		BF97878721656C8400BF75A0 /* Config Example */ = {
+			isa = PBXGroup;
+			children = (
+				BF97878821656CA400BF75A0 /* Config.json */,
+			);
+			path = "Config Example";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,13 +262,16 @@
 				TargetAttributes = {
 					BF6F05B7211B6AEE00DA760C = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 					};
 					BF6F05C9211B6AEF00DA760C = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 						TestTargetID = BF6F05B7211B6AEE00DA760C;
 					};
 					BF6F05D4211B6AEF00DA760C = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 						TestTargetID = BF6F05B7211B6AEE00DA760C;
 					};
 				};
@@ -281,9 +301,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF9787862165688D00BF75A0 /* AllQuotes.json in Resources */,
+				BF97878921656CA400BF75A0 /* Config.json in Resources */,
 				BF6F05C0211B6AEF00DA760C /* Assets.xcassets in Resources */,
 				BF351A2B2121FA5C0026B3E3 /* Authors.json in Resources */,
 				BF6F05C3211B6AEF00DA760C /* Main.storyboard in Resources */,
+				BF978784216564AA00BF75A0 /* Token.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,13 +332,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF6F05BE211B6AEE00DA760C /* ViewController.swift in Sources */,
-				BF12F18221458EF500F8365A /* QuoteService.swift in Sources */,
-				BF12F18021458E8C00F8365A /* Author.swift in Sources */,
+				BF12F18221458EF500F8365A /* Services.swift in Sources */,
+				BFA68B3E216A36A00041DA81 /* ConfigurationDelegate.swift in Sources */,
 				BF351A2E21222E6A0026B3E3 /* QuoteServiceDelegate.swift in Sources */,
 				BF6F05BC211B6AEE00DA760C /* AppDelegate.swift in Sources */,
 				BF17807B211B787F009631C3 /* RandomQuoteViewController.swift in Sources */,
-				BF12F17E21458E6200F8365A /* Quote.swift in Sources */,
-				BF12F17C21458E1600F8365A /* Enumerations.swift in Sources */,
+				BFA68B3C216A32590041DA81 /* TokenServiceDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,6 +345,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFE5B2F1216D531F003B1D72 /* testQuoteService.swift in Sources */,
 				BF6F05CF211B6AEF00DA760C /* Quote_MasterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -490,7 +513,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.Shiny-Idea.Quote-Master";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -509,7 +532,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.Shiny-Idea.Quote-Master";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -529,7 +552,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.Shiny-Idea.Quote-MasterTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Quote Master.app/Contents/MacOS/Quote Master";
 			};
 			name = Debug;
@@ -550,7 +573,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.Shiny-Idea.Quote-MasterTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Quote Master.app/Contents/MacOS/Quote Master";
 			};
 			name = Release;
@@ -570,7 +593,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.Shiny-Idea.Quote-MasterUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TEST_TARGET_NAME = "Quote Master";
 			};
 			name = Debug;
@@ -590,7 +613,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.Shiny-Idea.Quote-MasterUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TEST_TARGET_NAME = "Quote Master";
 			};
 			name = Release;

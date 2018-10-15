@@ -20,15 +20,23 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>LSApplicationCategoryType</key>
+	<string>public.app-category.reference</string>
 	<key>LSMinimumSystemVersion</key>
 	<string>$(MACOSX_DEPLOYMENT_TARGET)</string>
+	<key>LSUIElement</key>
+	<true/>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2018 Graham Watson. All rights reserved.</string>
 	<key>NSMainStoryboardFile</key>
 	<string>Main</string>
-	<key>LSUIElement</key>
-	<true/>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
+	<key>SI-Domain</key>
+	<string>https://www.shiny-ideas.tech/</string>
+	<key>SI-Access-URL</key>
+	<string>qws/accessrequest/43434df9-c94d-11e7-a9d6-00163eee1df8/</string>
+	<key>SI-All-Quote-URL</key>
+	<string>qws/quotes/$TOKEN/</string>
 </dict>
 </plist>

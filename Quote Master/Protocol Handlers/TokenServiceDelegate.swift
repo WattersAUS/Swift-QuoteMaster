@@ -66,27 +66,27 @@ class TokenDelegateHandler: NSObject, TokenServiceDelegate {
         guard self.useable == true || self.token != nil else {
             return ""
         }
-        return token.getVersion()
+        return self.token.getVersion()
     }
     
     func getServiceName() -> String {
         guard self.useable == true || self.token != nil else {
             return ""
         }
-        return token.getService()
+        return self.token.getService()
     }
     
     func getGeneratedDate() -> String {
         guard self.useable == true || self.token != nil else {
             return ""
         }
-        return token.getGenerated()
+        return self.token.getGenerated()
     }
     
     func getToken() -> String {
         guard self.useable == true || self.token != nil else {
             return ""
         }
-        return token.getToken()
+        return self.token.getToken()
     }
 }

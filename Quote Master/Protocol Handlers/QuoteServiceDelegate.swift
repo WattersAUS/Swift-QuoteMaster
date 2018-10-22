@@ -162,28 +162,28 @@ class QuoteDelegateHandler: NSObject, QuoteServiceDelegate {
         guard self.useable == true || self.quotes != nil else {
             return ""
         }
-        return quotes.getVersion()
+        return self.quotes.getVersion()
     }
     
     func getServiceName() -> String {
         guard self.useable == true || self.quotes != nil else {
             return ""
         }
-        return quotes.getService()
+        return self.quotes.getService()
     }
 
     func getGeneratedDate() -> String {
         guard self.useable == true || self.quotes != nil else {
             return ""
         }
-        return quotes.getGenerated()
+        return self.quotes.getGenerated()
     }
     
     func getAuthorCount() -> Int {
         guard self.useable == false || self.quotes != nil else {
             return 0
         }
-        return quotes.authors.count
+        return self.quotes.authors.count
     }
     
     func getAuthors() -> [Author] {

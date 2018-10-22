@@ -11,40 +11,82 @@
 
 import Foundation
 
+struct TokenService: Codable {
+    var version:   String
+    var service:   String
+    var generated: String
+    var token:     String
+    
+    private enum CodingKeys: String, CodingKey {
+        case version
+        case service
+        case generated
+        case token
+    }
+
+    func getVersion() -> String {
+        return self.version
+    }
+    
+    func getService() -> String {
+        return self.service
+    }
+    
+    func getGenerated() -> String {
+        return self.generated
+    }
+    
+    func getToken() -> String {
+        return self.token
+    }
+}
+
 protocol TokenServiceDelegate: class {
-    var service: NewTokenService! { get set }
+    var token: TokenService! { get set }
 }
 
 class TokenDelegateHandler: NSObject, TokenServiceDelegate {
-    internal var service:   NewTokenService!
-    internal var online:    Bool = false
-    
-    override init() {
+    internal var token:   TokenService!
+    internal var useable: Bool = false
+
+    init(data: Data!) {
         super.init()
-        self.online = false
-        self.getNewToken()
+        do {
+            let decoder    = JSONDecoder()
+            try self.token = decoder.decode(TokenService.self, from: data)
+            self.useable   = true
+        } catch _ as NSError {
+            self.token   = nil
+            self.useable = false
+        }
         return
+    }    
+
+    func getVersionString() -> String {
+        guard self.useable == true || self.token != nil else {
+            return ""
+        }
+        return token.getVersion()
     }
     
-    func decodeJSON(data: Data!) -> NewTokenService! {
-        var service: NewTokenService! = nil
-        let decoder = JSONDecoder()
-        do {
-            try service = decoder.decode(NewTokenService.self, from: data)
-            self.online = true
-        } catch let error as NSError {
-            self.online = false
+    func getServiceName() -> String {
+        guard self.useable == true || self.token != nil else {
+            return ""
         }
-        return service
+        return token.getService()
     }
     
-    func getNewToken() {
-        do {
-            let jsonFile = try String(contentsOf: URL(string: "NEW-TOKEN-SERVICE-GOES-HERE")!)
-            let fileData: Data = jsonFile.data(using: String.Encoding.utf8, allowLossyConversion: false)!
-            self.service = self.decodeJSON(data: fileData)
-        } catch {
-            self.online = false
+    func getGeneratedDate() -> String {
+        guard self.useable == true || self.token != nil else {
+            return ""
         }
+        return token.getGenerated()
+    }
+    
+    func getToken() -> String {
+        guard self.useable == true || self.token != nil else {
+            return ""
+        }
+        return token.getToken()
     }
 }

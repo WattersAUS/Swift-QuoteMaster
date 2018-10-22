@@ -1,0 +1,88 @@
+
+* Need to load JSON data from a URL and pass the payload into QuoteServiceDelegate handler
+
+//    func loadQuotes(url: String) -> (Bool, QuoteService) {
+//        var result: Bool = false
+//        var service: QuoteService! = nil
+//        do {
+//            let jsonFile = try String(contentsOf: URL(string: url)!)
+//            let fileData: Data = jsonFile.data(using: String.Encoding.utf8, allowLossyConversion: false)!
+//            service = self.decodeJSON(data: fileData)
+//            result = true
+//        } catch {
+//            result = false
+//        }
+//        return (result, service)
+//    }
+
+
+
+//    func getAliasByPosition(position: Int) -> Alias {
+//        guard (0..<self.aliases.count) ~= position else {
+//            return nil!
+//        }
+//        return self.aliases[position]
+//    }
+//
+//    func getAliasById(id: Int) -> Alias {
+//        guard (self.aliases.count == 0) else {
+//            return nil!
+//        }
+//        for index: Int in 0..<self.aliases.count {
+//            if self.aliases[index].id == id {
+//                return self.aliases[index]
+//            }
+//        }
+//        return nil!
+//    }
+
+//    func getQuoteByPosition(position: Int) -> Quote {
+//        guard (0..<self.quotes.count) ~= position else {
+//            return nil!
+//        }
+//        return self.quotes[position]
+//    }
+//
+//    func getQuoteById(id: Int) -> Quote {
+//        guard (self.quotes.count == 0) else {
+//            return nil!
+//        }
+//        for index: Int in 0..<self.quotes.count {
+//            if self.quotes[index].id == id {
+//                return self.quotes[index]
+//            }
+//        }
+//        return nil!
+//    }
+
+
+//    func getAuthorByPosition(position: Int) -> Author {
+//        guard self.useable == false || self.quotes == nil || (0..<self.quotes.authors.count) ~= position else {
+//            return nil!
+//        }
+//        return quotes.authors[position]
+//    }
+//
+//    func getAuthorById(id: Int) -> Author {
+//        guard self.useable == false || self.quotes == nil else {
+//            return nil!
+//        }
+//        for index: Int in 0..<self.quotes.authors.count {
+//            if self.quotes.authors[index].id == id {
+//                return self.quotes.authors[index]
+//            }
+//        }
+//        return nil!
+//    }
+//
+
+//    func getNewToken() {
+//        do {
+//            let jsonFile = try String(contentsOf: URL(string: "NEW-TOKEN-SERVICE-GOES-HERE")!)
+//            let fileData: Data = jsonFile.data(using: String.Encoding.utf8, allowLossyConversion: false)!
+//            self.service = self.decodeJSON(data: fileData)
+//        } catch {
+//            self.online = false
+//        }
+//    }
+

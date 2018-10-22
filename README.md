@@ -1,2 +1,2 @@
 # Swift-QuoteMaster
-Mac OS Swift Menu Bar App
+Mac OS Swift Menu Bar App (In progress)
